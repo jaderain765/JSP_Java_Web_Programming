@@ -54,6 +54,7 @@ public class JDBConnect {
         try {
             // JDBC 드라이버 로드
             String driver = application.getInitParameter("OracleDriver"); 
+            System.out.println(driver);
             Class.forName(driver); 
 
             // DB에 연결
