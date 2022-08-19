@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Vector;
 
 import common.DBConnPool;
+import model2.mvcboard.MVCBoardDTO;
 
 public class MyfileDAO extends DBConnPool {
 	// 새로운 게시물을 입력합니다.
@@ -56,6 +57,8 @@ public class MyfileDAO extends DBConnPool {
 		
 		return fileList;
 	}
+	
+
 }
 
 

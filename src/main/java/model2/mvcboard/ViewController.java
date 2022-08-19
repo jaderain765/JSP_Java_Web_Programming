@@ -18,7 +18,9 @@ public class ViewController extends HttpServlet {
 		MVCBoardDTO dto = dao.selectView(idx);
 		dao.close();
 		
-		dto.setContent(dto.getContent().replace("\r\n", "<br/>"));
+		System.out.println("dto.getContent()하면 머나오냐 ? : " + dto.getContent());
+		
+		dto.setContent(dto.getContent().replaceAll("\r\n", "<br/>"));
 		
 		request.setAttribute("dto", dto);
 		request.getRequestDispatcher("/14MVCBoard/View.jsp").forward(request, response);
